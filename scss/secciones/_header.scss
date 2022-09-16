@@ -1,0 +1,113 @@
+header {
+    .navbar {
+      height: 80px;
+      width: 100%;
+      /*Para colocarlo en un solo lugar*/
+
+      position: fixed!important;
+
+      top: 0;
+      left: 0;
+      /*Es para que el espaciado esté a los extremos*/
+      font-family: "Roboto";
+      font-weight: bolder;
+
+      line-height: 4vw;
+      z-index: 1;
+
+      .container-fluid {
+        background-color: #a87675;
+  
+        .navbar-brand img {
+          width: 197.7px;
+          height: 55px;
+        }
+        .navbar-collapse {
+          flex-grow: 0;
+        }
+        .nav-link {
+
+          display: flex;
+          flex-direction: column;
+
+          &:hover {
+            color: white;
+          }
+        }
+  
+        .dropdown-item {
+          &:hover {
+            background-color: #533e3883;
+            color: white;
+          }
+  
+          .dropdown-menu {
+            background-color: rgba(255, 255, 255, 0.932);
+          }
+        }
+  
+        .navbar-toggler {
+          background-color: #734241;
+        }
+      }
+
+    
+
+    }
+  
+    .grid-banner {
+      width: 100%;
+      background-image: url("../Imagenes/fondo-banner.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+  
+      justify-content: center;
+      align-items: center;
+  
+      display: grid;
+      grid-template-columns: 10vw 15vw 50vw 15vw 10vw;
+      grid-template-rows: 5vw auto 5vw;
+  
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        ". . . . ."
+        ". g-img-banner-p g-titulo-banner g-img-banner-c ."
+        ". . . . .";
+      .g-titulo-banner {
+        grid-area: g-titulo-banner;
+        text-align: center;
+  
+        font-family: "Roboto";
+        height: auto;
+        width: auto;
+      }
+  
+      .g-img-banner-c {
+        grid-area: g-img-banner-c;
+        img {
+          width: 100%;
+        }
+      }
+  
+      .g-img-banner-p {
+        grid-area: g-img-banner-p;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  
+    .banner-slo {
+      background-color: #533e38;
+  
+      text-align: center;
+      font-size: 4vw;
+      font-weight: bolder;
+      color: #cbc9c8;
+      padding: 30px;
+      border-style: solid none solid none;
+  
+      box-shadow: 17px 20px 20px black;
+    }
+  }

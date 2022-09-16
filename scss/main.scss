@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  min-height: 100%;
+  position: relative;
+  top: 0px;
+}
+body {
+  overflow-x: hidden;
+  padding-top: 80px;
+  margin: 0;
+  padding-bottom: 197px;
+  background-color: #a876751c;
+}
+
+@import'./secciones/header';
+
+@import "./secciones/_principal";
+@import'./secciones/combos';
+@import'./secciones/contactanos';
+@import'./secciones/sedes';
+@import'./secciones/sobrenosotros';
+@import'./secciones/footer';

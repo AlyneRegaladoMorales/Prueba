@@ -1,0 +1,108 @@
+.grid-sede {
+    width: auto;
+    justify-content: center;
+  
+    display: grid;
+    grid-template-columns: 5vw 35vw 35vw 5vw;
+    grid-template-rows: 2vw auto 2vw auto;
+  
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". g-titulo-sede g-titulo-sede ."
+      ". g-img-sede g-ifram-sede ."
+      ". g-titulo2-sede g-titulo2-sede ."
+      ". g-img2-sede g-iframe-sede .";
+  
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      font-size: 1.8vw;
+      color: brown;
+      margin-bottom: 30px;
+  
+      &:hover {
+        font-size: 2vw;
+        font-weight: bolder;
+      }
+    }
+    iframe {
+      width: 35vw;
+      border-radius: 10px;
+    }
+    img {
+      border-radius: 10px;
+      left: auto;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .grid-sede {
+      grid-template-rows: 2vw auto auto 2vw auto auto;
+      grid-template-areas:
+        ". g-titulo-sede g-titulo-sede ."
+        ". g-img-sede g-img-sede ."
+        ".g-ifram-sede g-ifram-sede ."
+        ". g-titulo2-sede g-titulo2-sede ."
+        ". g-img2-sede g-img2-sede ."
+        ". g-iframe-sede g-iframe-sede .";
+  
+      iframe {
+        width: 70vw;
+      }
+  
+      p {
+        font-size:3.5vw;
+  
+        &:hover {
+          font-size: 4vw;
+        }
+      }
+  
+      img {
+        border-radius: 20px;
+        padding-top: 4vw;
+        padding-right: 6vw;
+        padding-left: 6vw;
+      }
+    }
+  }
+  
+  .g-img-sede {
+    grid-area: g-img-sede;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .g-ifram-sede {
+    grid-area: g-ifram-sede;
+    padding: 2vw;
+  }
+  
+  .g-titulo-sede {
+    grid-area: g-titulo-sede;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .g-titulo2-sede {
+    grid-area: g-titulo2-sede;
+  }
+  
+  .g-img2-sede {
+    grid-area: g-img2-sede;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .g-iframe-sede {
+    grid-area: g-iframe-sede;
+    padding: 2vw;
+  }
+  
