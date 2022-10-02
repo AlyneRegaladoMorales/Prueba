@@ -91,15 +91,40 @@ header .grid-banner .g-img-banner-p {
 header .grid-banner .g-img-banner-p img {
   width: 100%;
 }
+@media (max-width: 500px) {
+  header .grid-banner {
+    grid-template-areas: ". . . . ." ". g-titulo-banner g-titulo-banner g-titulo-banner ." ". . . . .";
+  }
+}
+@media (max-width: 770px) {
+  header .grid-banner {
+    grid-template-areas: ". . . . ." ". g-titulo-banner g-titulo-banner g-titulo-banner ." ". . . . .";
+  }
+}
 header .banner-slo {
   background-color: #533e38;
   text-align: center;
-  font-size: 4vw;
+  font-size: 60px;
   font-weight: bolder;
   color: #cbc9c8;
   padding: 30px;
   border-style: solid none solid none;
   box-shadow: 17px 20px 20px black;
+}
+@media (max-width: 500px) {
+  header .banner-slo {
+    font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  header .banner-slo {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  header .banner-slo {
+    font-size: 40px;
+  }
 }
 
 main {
@@ -427,14 +452,11 @@ main .subTp h2 {
 
 .grid-comentario {
   display: grid;
-  background-color: #cbc9c8;
   border-radius: 2vw;
-  margin: 3vw;
   width: auto;
-  justify-content: center;
-  box-shadow: 2px 4px 5px gray;
+  justify-items: center;
   grid-template-columns: 5vw 20vw 20vw 5vw;
-  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: 15vh 7vh 10vh 7vh 10vh 7vh auto 9vh 10vh;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: ". g-titulo-contacto g-titulo-contacto ." ". g-nom1 g-nom2 ." ". g-label1 g-label2 ." ". g-nom3 g-nom4 ." ". g-label3 g-label4 ." ". g-tit-coment g-tit-coment ." ". g-coment g-coment ." ". g-cuadro-comet g-cuadro-comet ." ". g-button g-button .";
@@ -450,9 +472,9 @@ main .subTp h2 {
   display: flex;
   margin-left: 1vw;
   margin-right: 1vw;
-  gap: 50px;
-  width: 85%;
-  height: auto;
+  padding-right: 1vw;
+  width: 100%;
+  height: 6vh;
   border: none;
   border-radius: 6px;
   box-shadow: 2px 4px 5px gray;
@@ -461,7 +483,8 @@ main .subTp h2 {
 @media (max-width: 970px) {
   .grid-comentario {
     grid-template-columns: 5vw 10vw 30vw 5vw;
-    grid-template-areas: ". g-titulo-contacto g-titulo-contacto ." ". g-nom1 . ." ". g-label1 g-label1 ." ". g-nom2 . ." ". g-label2 g-label2 ." ". g-nom3 . ." ". g-label3 g-label3 . " ". g-nom4 . ." ". g-label4 g-label4 ." ". g-tit-coment g-tit-coment ." ". g-coment g-coment ." ". g-cuadro-comet g-cuadro-comet ." ". g-button g-button .";
+    grid-template-rows: 15vh 6vh 8vh 6vh 8vh 6vh 8vh 6vh 8vh 6vh auto 6vh 10vh;
+    grid-template-areas: "g-titulo-contacto g-titulo-contacto g-titulo-contacto g-titulo-contacto" "g-nom1 g-nom1 . ." "g-label1 g-label1 g-label1 g-label1 " "g-nom2 g-nom2 . ." "g-label2 g-label2 g-label2 g-label2 " "g-nom3 g-nom3 . ." "g-label3 g-label3 g-label3 g-label3 " "g-nom4 g-nom4 . ." "g-label4 g-label4 g-label4 g-label4 " "-tit-coment g-tit-coment  g-tit-coment g-tit-coment " "g-coment g-coment g-coment g-coment " "g-cuadro-comet g-cuadro-comet g-cuadro-comet ." ". g-button g-button .";
   }
 }
 .g-titulo-contacto {
@@ -521,10 +544,11 @@ main .subTp h2 {
 
 .g-cuadro-comet {
   grid-area: g-cuadro-comet;
+  display: inline-block;
 }
 .g-cuadro-comet input {
-  width: 1vw;
-  height: 1vw;
+  width: 20px;
+  height: 20px;
   display: inline-block;
   border: none;
 }
@@ -536,15 +560,17 @@ main .subTp h2 {
   grid-area: g-button;
 }
 .g-button .enviar {
+  display: flex;
   font-size: 13px;
   width: 95%;
-  height: auto;
+  height: 5vh;
   margin-bottom: 1vw;
   background-color: #4d342e;
   border-radius: 6px;
   border: none;
   color: aliceblue;
   font-weight: bolder;
+  justify-content: space-evenly;
 }
 
 .grid-sede {

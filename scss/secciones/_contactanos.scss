@@ -1,14 +1,15 @@
 .grid-comentario {
   display: grid;
-  background-color:#cbc9c8;
-  border-radius: 2vw;
-  margin: 3vw;
- width: auto;
-  justify-content: center;
-  box-shadow: 2px 4px 5px gray;
 
+  border-radius: 2vw;
+ 
+  width: auto;
+ 
+
+
+  justify-items:center;
   grid-template-columns: 5vw 20vw 20vw 5vw;
-  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-template-rows: 15vh 7vh 10vh 7vh 10vh 7vh auto 9vh 10vh;
 
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -32,40 +33,37 @@
   input {
     display: flex;
     margin-left: 1vw;
-  margin-right: 1vw;
-    gap: 50px;
-    width: 85%;
-    height: auto;
+    margin-right: 1vw;
+    padding-right: 1vw;
+    width: 100%;
+    height: 6vh;
     border: none;
     border-radius: 6px;
     box-shadow: 2px 4px 5px gray;
   }
   justify-content: center;
-        align-items: center;
+  align-items: center;
 }
 
-@media(max-width:970px){
+@media (max-width: 970px) {
   .grid-comentario {
     grid-template-columns: 5vw 10vw 30vw 5vw;
+    grid-template-rows: 15vh 6vh 8vh 6vh 8vh 6vh 8vh 6vh 8vh 6vh auto 6vh 10vh;
     grid-template-areas:
-    ". g-titulo-contacto g-titulo-contacto ."
-    ". g-nom1 . ."
-    ". g-label1 g-label1 ."
-    ". g-nom2 . ."
-    ". g-label2 g-label2 ."
-
-    ". g-nom3 . ."
-     ". g-label3 g-label3 . "
-  
-    ". g-nom4 . ."
-    ". g-label4 g-label4 ."
-    ". g-tit-coment g-tit-coment ."
-    ". g-coment g-coment ."
-    ". g-cuadro-comet g-cuadro-comet ."
-    ". g-button g-button .";
-
+      "g-titulo-contacto g-titulo-contacto g-titulo-contacto g-titulo-contacto"
+      "g-nom1 g-nom1 . ."
+      "g-label1 g-label1 g-label1 g-label1 "
+      "g-nom2 g-nom2 . ."
+      "g-label2 g-label2 g-label2 g-label2 "
+      "g-nom3 g-nom3 . ."
+      "g-label3 g-label3 g-label3 g-label3 "
+      "g-nom4 g-nom4 . ."
+      "g-label4 g-label4 g-label4 g-label4 "
+      "-tit-coment g-tit-coment  g-tit-coment g-tit-coment "
+      "g-coment g-coment g-coment g-coment "
+      "g-cuadro-comet g-cuadro-comet g-cuadro-comet ."
+      ". g-button g-button .";
   }
-
 }
 
 .g-titulo-contacto {
@@ -87,12 +85,10 @@
 
 .g-label1 {
   grid-area: g-label1;
- 
 }
 
 .g-label2 {
   grid-area: g-label2;
-
 }
 
 .g-nom3 {
@@ -105,12 +101,10 @@
 
 .g-label3 {
   grid-area: g-label3;
-
 }
 
 .g-label4 {
   grid-area: g-label4;
-
 }
 
 .g-tit-coment {
@@ -131,32 +125,33 @@
 .g-cuadro-comet {
   grid-area: g-cuadro-comet;
 
-  
-  
-  input{width: 1vw;
-    height: 1vw;      
+  display: inline-block;
+
+  input {
+    width: 20px;
+    height: 20px;
     display: inline-block;
     border: none;
   }
-  p{
+  p {
     display: inline-block;
   }
- 
 }
 
 .g-button {
   grid-area: g-button;
 
   .enviar {
+    display: flex;
     font-size: 13px;
     width: 95%;
-    height:auto;
+    height: 5vh;
     margin-bottom: 1vw;
     background-color: #4d342e;
     border-radius: 6px;
     border: none;
     color: aliceblue;
     font-weight: bolder;
-
+    justify-content: space-evenly;
   }
 }
